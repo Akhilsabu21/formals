@@ -45,15 +45,23 @@ body{
 .nav-list{
     width: 55%;
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 .nav-list-item{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 78px;
+    padding: 0 8px;
+    word-spacing: 5px;
 }
-.nav-list-item:hover {background-color: #333232}
+.nav-list-item:hover {
+    background-color: #333232;
+}
 
 .nav-list-item:active {
   background-color: #000000;
@@ -105,7 +113,7 @@ body{
 }
 .nav-icon input{
     margin-top: 15px;
-    width: 72px;
+    width: 75px;
     height: 20px;
     border: 0;
     background-color:transparent;
@@ -206,9 +214,10 @@ body{
 .look1{
     width: 30%;
     position: relative;
+    transition: 0.8s;
 }
 .look1:hover{
-    transform: scale(1.1);
+    transform: scale(1.05);
     transition: 0.8s;
 }
 .look1 img{
@@ -361,17 +370,58 @@ body{
     justify-content: center;
 }
 .return-content{
-    text-align: justify;
-    width: 60%;
+    width: 65%;
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border: 1px solid rgb(31, 31, 31);
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.return-product-image{
+    width: 20%;
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.return-product-image img{
+    width: 70%;
+}
+.return-reason{
+    margin-left: 10px;
+    margin-top: 40px;
+    width: 40%;
+    height: 300px;
+    display: block;
+}
+#reason{
+    background-color: transparent;
     color: #ffffff;
 }
-.return-content h1{
-    text-align: center;
-    color: #ffffff;
+.return-button{
+    width: 38%;
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
 }
-.return-para{
+.return-button button{
+    width: 150px;
+    height: 60px;
+    border: 1px solid #262626;
+    background-color: transparent;
     color: #ffffff;
-    font-weight: bolder;
+    font-size: large;
+}
+.return-button button:hover{
+    background-color: #444aff;
 }
 .sale-content{
     width: 100%;
@@ -435,6 +485,9 @@ body{
     border: 1px solid rgb(21, 21, 21);
     border-radius: 10px;
     color: #ffffff;
+}
+.login-box:hover{
+    background-color: #262626;
 }
 .login-box label{
     padding-left: 80px;
@@ -510,6 +563,9 @@ body{
     border-radius: 10px;
     color: #ffffff;
 }
+.divider button:hover{
+    background-color: #333333;
+}
 .fav-item-body{
     width: 100%;
     display: flex;
@@ -529,6 +585,9 @@ body{
     margin-bottom: 25px;
     border: 1px solid rgb(28, 28, 28);
 }
+.fav-items:hover{
+    background-color: #343434;
+}
 .fav-items img{
     width: 12%;
 }
@@ -541,7 +600,7 @@ body{
 }
 
 .fav-items button:hover {
-    background-color: #333232
+    background-color: #444aff
 }
 .fav-items button:active {
   background-color: transparent;
@@ -585,21 +644,29 @@ body{
     align-items: center;
     gap: 5px;
 }
+.offers:hover{
+    background-color: rgb(134, 44, 212);
+    transform: scale(1);
+}
 .offers{
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     border-radius: 100%;
-    border: 1px solid rgb(136, 0, 255) ;
+    border: 5px double rgb(136, 0, 255) ;
     text-align: center;
 }
 .offers p{
     font-size: xx-large;
-    padding-top: 55px;
+    padding-top: 35px;
     margin: 0;
+}
+.offers a{
+    text-decoration: none;
+    color: #ffffff;
 }
 .offers h4{
     margin: 0;
 }
 .offers h3{
-    padding-top: 65px;
+    padding-top: 45px;
 }
